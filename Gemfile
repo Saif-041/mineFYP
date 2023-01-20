@@ -6,7 +6,7 @@ ruby "3.1.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails"
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+# # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 # gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
@@ -43,7 +43,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-gem "sassc-rails"
+# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -78,6 +78,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'byebug'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'activeadmin'
+gem 'sass-rails'
 gem 'country_select', '~> 6.0'
 gem 'city-state'
 gem 'activestorage-validator'

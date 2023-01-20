@@ -4,7 +4,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "RoboVerse"
+  config.site_title = "MetaStash"
   
   # config.skip_before_filter :authenticate_user!
   
@@ -319,7 +319,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  config.footer = 'Powered By Sp19-BSE-041 (MUHAMMAD SAIF ULLAH)'
+  # config.footer = 'my custom footer text'
 
   # == Sorting
   #
