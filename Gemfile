@@ -73,7 +73,7 @@ end
 #USER ADDED
 gem 'devise'
 gem 'devise-jwt'
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'byebug'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
