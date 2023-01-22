@@ -4,6 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
     before_action :configure_permitted_parameters, if: :devise_controller?
     before_action :cor
+    
+    rescue_from ActionController::InvalidAuthenticityToken, :with => :bad_token
+
+    def bad_token
+      Rails.logger.debug("session expired!")
+      # flash[:warning] = "Session expired"
+    end
+
     def cor
       headers["Access-Control-Allow-Origin"]  = "*"
       headers["Access-Control-Allow-Methods"] = %w{GET POST PUT DELETE}.join(",")
