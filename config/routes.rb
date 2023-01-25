@@ -20,6 +20,8 @@ Rails.application.routes.draw do
  get '/cities', to: "drop#city"
  get '/province', to: "drop#province"
 #-------------------------Reset Password-----------------------------
+post 'users/rename', to: 'getuserinformation#rename'
+#-------------------------Reset Password-----------------------------
 post 'users/forgotpassword', to: 'password#forgot'
 post 'users/resetpassword', to: 'password#reset'
 #----------------------------------------------------------------
