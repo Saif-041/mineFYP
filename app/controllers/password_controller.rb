@@ -14,20 +14,20 @@ class PasswordController < ApplicationController
     end
 
     def reset
-        token = params[:token].to_s
-    
-        if params[:token].blank?
-           render json: {error: "Token not present",status:404}, status: :ok
-        end
-    
-        @user = User.find_by(reset_password_token: token)
-    
-        if @user.present? && @user.password_token_valid?
-          if @user.reset_password!(params[:password])
-            render json: {message:"password changed successfully!!!",status: 200}, status: :ok
-          end
-        else
-          render json: {error:"Token not valid or expired. Try generating a new Token.",status:401}, status: :ok
-        end
+      token = params[:token].to_s
+  
+      if params[:token].blank?
+          render json: {error: "Token not present",status:404}, status: :ok
       end
+  
+      @user = User.find_by(reset_password_token: token)
+  
+      if @user.present? && @user.password_token_valid?
+        if @user.reset_password!(params[:password])
+          render json: {message:"password changed successfully!!!",status: 200}, status: :ok
+        end
+      else
+        render json: {error:"Token not valid or expired. Try generating a new Token.",status:401}, status: :ok
+      end
+    end
 end
