@@ -10,11 +10,12 @@ ActiveAdmin.register User do
       column :id
       column :name 
       column :email
-      column :city
-      column :role
-      column :payment_status
-      column :payment_date
-      column :total_collection
+      # column :city
+      # column :role
+      # column :payment_status
+      # column :payment_date
+      # column :total_collection
+      column :coins
       actions
   end
 

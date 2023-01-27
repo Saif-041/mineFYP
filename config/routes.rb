@@ -19,8 +19,11 @@ Rails.application.routes.draw do
  post "/admin/add_bulk_drops/import/drops", to:"drop#import"
  get '/cities', to: "drop#city"
  get '/province', to: "drop#province"
-#-------------------------Reset Password-----------------------------
+#-------------------------Rename User-----------------------------
 post 'users/rename', to: 'getuserinformation#rename'
+#-------------------------User Coins-----------------------------
+post '/users/reward', to: 'getuserinformation#reward'
+post '/users/stake', to: 'getuserinformation#stake'
 #-------------------------Reset Password-----------------------------
 post 'users/forgotpassword', to: 'password#forgot'
 post 'users/resetpassword', to: 'password#reset'
